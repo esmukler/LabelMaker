@@ -1,4 +1,4 @@
-[Label Maker](http://eli-smukler-label-maker.herokuapp.com)
+** [Label Maker](http://eli-smukler-label-maker.herokuapp.com)
 
 This is a sample app that creates USPS Shipping Labels
 

@@ -1,0 +1,87 @@
+<h1>Create a New Label</h1>
+
+<form class="label-form group" action="<%= labels_url %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <div class="form-section group">
+
+    <h2>To Address:</h2><br>
+
+    <label>Name:
+      <input type="text" name="to_address[name]" value="">
+    </label>
+
+    <label>Company:
+      <input type="text" name="to_address[company]" value="">
+    </label>
+
+    <label>Street:
+      <input type="text" name="to_address[street1]" value="">
+    </label>
+
+    <label>City:
+      <input type="text" name="to_address[city]" value="">
+    </label>
+
+    <label>State:
+      <input type="text" name="to_address[state]" value="">
+    </label>
+
+    <label>Zip:
+      <input type="text" name="to_address[zip]" value="">
+    </label>
+
+  </div>
+  <div class="form-section group">
+
+    <h2>From Address:</h2><br>
+
+    <label>Company:
+      <input type="text" name="from_address[company]" value="">
+    </label>
+
+    <label>Street:
+      <input type="text" name="from_address[street1]" value="">
+    </label>
+
+    <label>City:
+      <input type="text" name="from_address[city]" value="">
+    </label>
+
+    <label>State:
+      <input type="text" name="from_address[state]" value="">
+    </label>
+
+    <label>Zip:
+      <input type="text" name="from_address[zip]" value="">
+    </label>
+
+  </div>
+
+  <div class="form-section group">
+
+    <h2>Parcel:</h2><br>
+
+    <label>Length
+      <input type="text" name="parcel[length]" value="">
+    </label>
+
+    <label>Width
+      <input type="text" name="parcel[width]" value="">
+    </label>
+
+    <label>Height
+      <input type="text" name="parcel[height]" value="">
+    </label>
+
+    <label>Weight
+      <input type="text" name="parcel[weight]" value="">
+    </label>
+
+  </div>
+
+
+  <input class="submit" value="Purchase Your Label" type="submit"></input>
+</form>
+
+<a class="footer-link" href="<%= labels_url %>">Purchased Labels</a>

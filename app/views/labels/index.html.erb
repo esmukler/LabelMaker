@@ -1,0 +1,14 @@
+<h1>Your Labels</h1>
+
+<ul class="labels-list">
+  <% @labels.each do |label| %>
+    <li>
+      <p>Label Created: <%= label.date %></p>
+      <p>Tracking Code: <%= label.tracking_code %></p>
+      <p><a href="<%= label.url %>">Shipping Label</a>
+    </li>
+  <% end %>
+</ul>
+
+
+<a class="footer-link" href="<%= new_label_url %>">Create a New Label</a>

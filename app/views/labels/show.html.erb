@@ -1,0 +1,15 @@
+<h1>Here's Your Label!</h1>
+
+<a href="<%= @label.url %>">Your Shipping Label</a>
+
+
+<p>
+  You can use this tracking code to follow the progress of your parcel:
+</p>
+
+<p>
+  <%= @label.tracking_code %>
+</p>
+
+
+<a href="<%= labels_url %>">All Your Shipping Labels</a>

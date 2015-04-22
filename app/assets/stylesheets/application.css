@@ -1,0 +1,89 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+ html, div,
+ h1, h2, p {
+   margin: 0;
+   border: 0;
+   padding: 0;
+   outline: 0;
+   box-sizing: inherit;
+   font: inherit;
+   font-family: "Garamond";
+   text-decoration: inherit;
+   text-align: inherit;
+   color: inherit;
+   background: transparent;
+ }
+
+ ul {
+   list-style: none;
+ }
+
+ .group:after {
+   display: block;
+   content: "";
+   clear: both;
+ }
+
+ h1 {
+   text-align: center;
+   font-size: 28px;
+   font-weight: bold;
+ }
+
+ .labels-list,
+ .label-form {
+   width: 400px;
+   margin: 0 auto;
+   border: 1px solid #6B3D00;
+   background: #FFC982;
+   padding: 10px;
+   border-radius: 10px;
+ }
+
+
+ .labels-list li,
+ .form-section {
+   margin: 0 auto;
+   margin-bottom: 10px;
+   width: 300px;
+ }
+
+ .form-section h2 {
+   font-weight: bold;
+   font-size: 20px;
+ }
+
+
+ .form-section label {
+   float: left;
+   margin: 5px;
+ }
+
+.submit {
+  font-size: 20px;
+  padding: 5px 20px;
+  font-family: Garamond;
+  float: right;
+}
+
+.footer-link {
+  display: block;
+  margin: 5px auto;
+  text-align: center;
+}

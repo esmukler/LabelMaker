@@ -1,5 +1,12 @@
 <h1>Create a New Label</h1>
 
+<% if flash[:errors] %>
+  <div class="errors">
+    <p><%= flash[:errors] %></p>
+    <p>Please try again.</p>
+  </div>
+<% end %>
+
 <form class="label-form group" action="<%= labels_url %>" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 

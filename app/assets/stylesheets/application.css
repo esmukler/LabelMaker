@@ -34,6 +34,10 @@
    list-style: none;
  }
 
+ a {
+   cursor: pointer;
+ }
+
  .group:after {
    display: block;
    content: "";
@@ -46,6 +50,7 @@
    font-weight: bold;
  }
 
+ .show-label,
  .labels-list,
  .label-form {
    width: 400px;
@@ -54,6 +59,15 @@
    background: #FFC982;
    padding: 10px;
    border-radius: 10px;
+ }
+
+ .show-label {
+   width: 500px;
+ }
+
+ .show-label p {
+   margin: 5px;
+   
  }
 
 
@@ -86,4 +100,14 @@
   display: block;
   margin: 5px auto;
   text-align: center;
+}
+
+.errors {
+  padding: 5px;
+  text-align: center;
+  width: 400px;
+  margin: 5px auto;
+  background: #FA8E8E;
+  border-radius: 10px;
+  border: 1px solid black;
 }

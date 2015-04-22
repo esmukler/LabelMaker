@@ -18,14 +18,19 @@ class LabelsController < ApplicationController
         parcel: params[:parcel]
       })
     rescue EasyPost::Error => e
-      flash.now[:errors] = e
-      puts "Here's your errors!"
-      print e
+
+      flash[:errors] = e.message[19..-1]
+
       redirect_to new_label_url and return
     end
 
+    begin
+      shipment.buy(rate: shipment.lowest_rate)
+    rescue EasyPost::Error => e
 
-    shipment.buy(rate: shipment.lowest_rate)
+      flash[:errors] = "No rates found. Check that both addresses are correct."
+      redirect_to new_label_url and return
+    end
 
     url = shipment.postage_label.label_url
 
@@ -40,7 +45,7 @@ class LabelsController < ApplicationController
     if @label.save
       redirect_to label_url(@label)
     else
-      flash.now[:errors] = @label.errors.full_messages
+      flash[:errors] = @label.errors.full_messages
       render :new
     end
 

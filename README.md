@@ -1,4 +1,4 @@
-== [Label Maker](link)
+[Label Maker](esmukler.github.io/label_maker)
 
 This is a sample app that creates USPS Shipping Labels
 
